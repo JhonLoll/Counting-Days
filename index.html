@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Chama o CSS local -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Chama o BOOTSTRAP via CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <title>Counting Days</title>
+</head>
+<body>
+    <div class="container-fluid text-center container-box">
+        <div class="col">        
+            <!-- Título -->
+            <div class="row header mt-4">
+                <h1 class="display-4 fw-bold text-gradient">Rika & Jhon ❤️</h1>
+            </div>
+
+            <!-- Carrossel de Imagens -->
+            <div id="carouselExampleCaptions" class="carousel slide">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="./imgs/img1.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Nosso Ethan Samuel</h5>
+                      <p>O dia do descobrimento do sexo do nosso pequeno bebê.</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./imgs/img2.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Amor</h5>
+                      <p>Um amor que perdura até o presente momento, compartilhando momentos sinceros.</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./imgs/img3.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Papais lindos</h5>
+                      <p>Realmente estamos lindos nessa foto.</p>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+            <!-- Corpo -->
+            <div class="col">
+                <div class="row">
+                    <!-- Sidebars -->
+                    <div class="col col-sm-2 side-bar"></div>
+                    <div class="col col-sm main">
+                        <!-- Contador -->
+                        <div class="container my-5">
+                            <div class="row justify-content-center">
+                                <div class="col-md-6">
+                                    <div class="counter-box text-center">
+                                        <h2 class="counter-title">O Relógio da Nossa História</h2>
+                                        <p class="text-secondary">Desde: <span id="dataInicial" class="fw-bold">26/02/2022</span></p>
+                                        <div id="counter" class="d-flex justify-content-center">
+                                            <div class="time-box">
+                                                <span id="years">00</span>
+                                                <p>Anos</p>
+                                            </div>
+                                            <div class="time-box">
+                                                <span id="days">00</span>
+                                                <p>Dias</p>
+                                            </div>
+                                            <div class="time-box">
+                                                <span id="hours">00</span>
+                                                <p>Horas</p>
+                                            </div>
+                                            <div class="time-box">
+                                                <span id="minutes">00</span>
+                                                <p>Minutos</p>
+                                            </div>
+                                            <div class="time-box">
+                                                <span id="seconds">00</span>
+                                                <p>Segundos</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Texto abaixo do contador -->
+                                    <p class="mt-4 text-muted">"A jornada é tão especial quanto o destino."</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-sm-2 side-bar"></div>
+                </div>
+            </div>
+
+            <!-- Rodapé -->
+            <div class="col-sm">
+                <div class="row footer mt-4">
+                    <p class="text-center text-secondary">&copy; 2024 Jhon e Rika. Criado com ❤️ para celebrar momentos especiais.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chama o script local -->
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var myCarousel = document.querySelector('#imageCarousel');
+            var carousel = new bootstrap.Carousel(myCarousel);
+        });
+
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "firebase/app";
+        import { getAnalytics } from "firebase/analytics";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyAkIoSY8GuXoy-BSeThv4bfR6662IXKlIs",
+            authDomain: "counting-days-2ee33.firebaseapp.com",
+            projectId: "counting-days-2ee33",
+            storageBucket: "counting-days-2ee33.firebasestorage.app",
+            messagingSenderId: "921548439067",
+            appId: "1:921548439067:web:cd4836c7dca0d7fcac82be",
+            measurementId: "G-63P88GCV9W"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+    </script>
+</body>
+</html>
